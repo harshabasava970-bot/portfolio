@@ -1,5 +1,5 @@
 import React from 'react';
-import stackImage from '../assets/about/harsha-avatar.png';
+import stackImage from '../assets/about/harsha-avatar.jpg';
 import { aboutContent } from '../data/portfolioData';
 
 const PythonIcon = () => (

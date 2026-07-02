@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import heroPhoto from '../assets/about/harsha-avatar.png';
+import heroPhoto from '../assets/about/harsha-avatar.jpg';
 import { heroContent, socialLinks } from '../data/portfolioData';
 
 const AnimatedBackground = () => (
