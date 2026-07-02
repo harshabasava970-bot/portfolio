@@ -1,30 +1,41 @@
 import React from 'react';
 import { certificates } from '../data/portfolioData';
 
-const CertificateCard = ({ cert, aosDelay }) => (
-  <div 
-    data-aos="zoom-in"
-    data-aos-delay={aosDelay}
-    className="bg-black/20 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-white/25 hover:scale-105 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] transition-all duration-500 cursor-default group"
-  >
-    <div className="flex items-start gap-4">
-      <span className="text-2xl mt-0.5 group-hover:scale-110 transition-transform duration-300">{cert.icon}</span>
-      <div>
-        <h3 className="text-white font-bold text-sm md:text-base leading-tight mb-1 group-hover:text-white transition-colors">
-          {cert.name}
-        </h3>
-        <p className="text-white/50 text-xs font-semibold uppercase tracking-wider">
-          {cert.issuer}
-        </p>
+const CertificateCard = ({ cert, aosDelay }) => {
+  const card = (
+    <div
+      data-aos="zoom-in"
+      data-aos-delay={aosDelay}
+      className="bg-black/20 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-white/25 hover:scale-105 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] transition-all duration-500 cursor-pointer group"
+    >
+      <div className="flex items-start gap-4">
+        <span className="text-2xl mt-0.5 group-hover:scale-110 transition-transform duration-300">{cert.icon}</span>
+        <div>
+          <h3 className="text-white font-bold text-sm md:text-base leading-tight mb-1 group-hover:text-white transition-colors">
+            {cert.name}
+          </h3>
+          <p className="text-white/50 text-xs font-semibold uppercase tracking-wider">
+            {cert.issuer}
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+
+  if (cert.url) {
+    return (
+      <a href={cert.url} target="_blank" rel="noopener noreferrer" className="block">
+        {card}
+      </a>
+    );
+  }
+  return card;
+};
 
 const Certificates = () => {
   return (
     <section className="bg-[#ff2a2a] pt-20 pb-28 px-6 md:px-12 w-full relative overflow-hidden font-sans">
-      
+
       {/* Torn paper divider at top (transition from dark Projects section) */}
       <div className="absolute top-0 left-0 w-full pointer-events-none z-10 transform -translate-y-[1px] rotate-180">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-20 fill-[#0a0a0a]">
@@ -39,17 +50,17 @@ const Certificates = () => {
             Certifications
           </h2>
           <p className="text-red-100 text-base md:text-lg font-semibold max-w-lg mx-auto">
-            Industry-recognized certifications that validate my technical expertise.
+            Industry-recognized certifications from Google, IBM, Microsoft, and AWS that validate my AI expertise.
           </p>
         </div>
 
         {/* Certificate Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {certificates.featured.map((cert, index) => (
-            <CertificateCard 
-              key={cert.name} 
-              cert={cert} 
-              aosDelay={String((index + 1) * 100)} 
+            <CertificateCard
+              key={cert.name}
+              cert={cert}
+              aosDelay={String((index + 1) * 100)}
             />
           ))}
         </div>
@@ -73,7 +84,7 @@ const Certificates = () => {
         </div>
       </div>
 
-      {/* Decorative stars (matching About section) */}
+      {/* Decorative stars */}
       <div className="absolute top-16 left-6 md:left-16 text-black opacity-20 animate-pulse">
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z"/></svg>
       </div>
