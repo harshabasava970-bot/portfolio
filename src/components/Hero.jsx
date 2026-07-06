@@ -1,57 +1,40 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import heroVideo from '../assets/hero video/harsha-hero.mp4';
+import heroPhoto from '../assets/about/harsha-avatar.jpg';
 import { heroContent, socialLinks } from '../data/portfolioData';
 
 const Hero = () => {
-  const videoRef = useRef(null);
-  const [playing, setPlaying] = useState(true);
-
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: 'ease-out' });
   }, []);
 
-  const togglePlay = () => {
-    if (!videoRef.current) return;
-    if (playing) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setPlaying(!playing);
-  };
-
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section className="relative w-full h-screen overflow-hidden bg-[#c0100a]">
 
-      {/* ── Full-screen background video ── */}
-      <video
-        ref={videoRef}
-        src={heroVideo}
-        autoPlay
-        muted
-        loop
-        playsInline
+      {/* ── Full-screen background photo ── */}
+      <img
+        src={heroPhoto}
+        alt="Basava Harsha"
         className="absolute inset-0 w-full h-full object-cover object-center z-0"
       />
 
-      {/* ── Dark gradient overlay — heavier on left for text legibility ── */}
+      {/* ── Left gradient so text stays readable ── */}
       <div
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            'linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.1) 100%)',
+            'linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.40) 45%, rgba(0,0,0,0.05) 100%)',
         }}
       />
 
-      {/* ── Red tint overlay (matches your red theme) ── */}
+      {/* ── Red tint to match theme ── */}
       <div
         className="absolute inset-0 z-[2] pointer-events-none"
-        style={{ background: 'rgba(180,20,20,0.18)' }}
+        style={{ background: 'rgba(160,15,10,0.22)' }}
       />
 
-      {/* ── Left Floating Social Bar — desktop ── */}
+      {/* ── Left Floating Social Bar ── */}
       <div className="hidden lg:flex flex-col gap-6 fixed left-6 top-1/2 -translate-y-1/2 z-50">
         <a href={socialLinks.github} target="_blank" rel="noopener noreferrer"
           className="text-white/60 hover:text-white transition-all duration-300 transform hover:scale-125" aria-label="GitHub">
@@ -69,8 +52,6 @@ const Hero = () => {
 
       {/* ── Main content ── */}
       <div className="absolute inset-0 z-10 flex items-center px-8 md:px-16 lg:px-24">
-
-        {/* LEFT — Text + Buttons */}
         <div className="flex flex-col items-start text-left max-w-xl w-full">
 
           {/* Mobile socials */}
@@ -90,14 +71,15 @@ const Hero = () => {
           </div>
 
           {/* Greeting */}
-          <p data-aos="fade-up" className="text-white/80 text-lg md:text-xl font-medium mb-2 tracking-wide">
+          <p data-aos="fade-up"
+            className="text-white/90 text-lg md:text-xl font-medium mb-2 tracking-wide">
             {heroContent.greeting}
           </p>
 
           {/* Title */}
           <h1 data-aos="fade-up" data-aos-delay="150"
             className="text-white text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight drop-shadow-lg">
-            <span className="text-[#ff2a2a]">{heroContent.titleHighlight}</span>
+            <span className="text-white">{heroContent.titleHighlight}</span>
           </h1>
 
           {/* Subtitle */}
@@ -114,11 +96,11 @@ const Hero = () => {
               {heroContent.ctaPrimary.text}
             </a>
             <a href={heroContent.ctaSecondary.href}
-              className="px-6 py-2.5 text-sm md:text-base rounded-full bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all duration-300">
+              className="px-6 py-2.5 text-sm md:text-base rounded-full bg-black/40 border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm">
               {heroContent.ctaSecondary.text}
             </a>
             <a href={heroContent.ctaResume.href} download
-              className="px-6 py-2.5 text-sm md:text-base rounded-full bg-[#ff2a2a] text-white font-semibold hover:bg-[#cc1f1f] transition-all duration-300 flex items-center gap-2 shadow-lg">
+              className="px-6 py-2.5 text-sm md:text-base rounded-full bg-black/50 border border-white/50 text-white font-semibold hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -129,32 +111,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* ── Play / Pause button — bottom right, like Leeshark ── */}
-      <button
-        onClick={togglePlay}
-        aria-label={playing ? 'Pause video' : 'Play video'}
-        className="absolute bottom-10 right-8 z-20 w-14 h-14 rounded-full bg-white/10 border border-white/30 backdrop-blur-md flex flex-col items-center justify-center gap-0.5 hover:bg-white/20 transition-all duration-300 group"
-      >
-        {playing ? (
-          /* Pause icon — two bars */
-          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-          </svg>
-        ) : (
-          /* Play icon */
-          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        )}
-        <span className="text-white text-[9px] font-bold tracking-widest uppercase">
-          {playing ? 'Pause' : 'Play'}
-        </span>
-      </button>
-
       {/* ── Scroll indicator ── */}
       <div className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
         <div className="animate-bounce">
-          <svg className="w-6 h-6 text-white/60"
+          <svg className="w-6 h-6 text-white/70"
             fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"
             viewBox="0 0 24 24" stroke="currentColor">
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
