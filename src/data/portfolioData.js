@@ -16,7 +16,7 @@ export const personalInfo = {
     secondary: "",
   },
   summary:
-    "Motivated, enthusiastic and dedicated Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. Proficient in Python and Java with a solid understanding of programming fundamentals and problem-solving techniques. Eager to apply technical knowledge and AI concepts to develop innovative solutions for real-world challenges.",
+    "Motivated, enthusiastic and dedicated Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. Proficient in Python and Java with a solid understanding of programming fundamentals and problem-solving techniques. Demonstrates strong analytical thinking, adaptability, and a commitment to continuous learning. Eager to apply technical knowledge and AI concepts to develop innovative solutions for real-world challenges.",
   resumeUrl: "/Harsha_Basava_Resume.pdf",
 };
 
@@ -30,7 +30,7 @@ export const heroContent = {
   greeting: "Hi, I'm Basava Harsha",
   titleHighlight: "AI & ML Engineer",
   subtitle:
-    "I build intelligent systems using Python, FastAPI, computer vision, and modern full-stack technologies.",
+    "I build intelligent systems using Python, FastAPI, LangGraph, and modern full-stack technologies.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
@@ -41,8 +41,8 @@ export const heroContent = {
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Basava Harsha</span>, a CSE student specializing in Artificial Intelligence and Machine Learning, based in Vuyyur, India. I'm passionate about building intelligent, real-world applications that solve meaningful problems using Python, FastAPI, computer vision, and full-stack technologies.`,
-  techStack: ["Python", "FastAPI", "React"],
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Basava Harsha</span>, a CSE student specializing in Artificial Intelligence and Machine Learning, based in Vuyyur, India. I'm passionate about building intelligent, real-world applications — from AI agents with long-term memory to automated code review bots — using Python, FastAPI, LangGraph, and full-stack technologies.`,
+  techStack: ["Python", "FastAPI", "LangGraph", "React"],
 };
 
 export const skillsContent = {
@@ -64,7 +64,7 @@ export const skillsContent = {
     {
       number: "03",
       title: "Develop",
-      text: "Building intelligent backends with Python and FastAPI, and responsive frontends with React — integrating AI models with production-ready APIs.",
+      text: "Building intelligent backends with Python and FastAPI, and responsive frontends with React and Next.js — integrating AI models with production-ready APIs.",
     },
     {
       number: "04",
@@ -87,11 +87,11 @@ export const technicalSkills = {
     {
       title: "AI & Machine Learning",
       skills: [
+        { name: "LangGraph / LangChain", level: 88 },
         { name: "Prompt Engineering", level: 88 },
         { name: "Responsible AI", level: 82 },
         { name: "Vibe Coding", level: 78 },
-        { name: "YOLOv8 / OpenCV", level: 85 },
-        { name: "Whisper / edge-tts", level: 80 },
+        { name: "Whisper / Groq API", level: 85 },
       ],
     },
     {
@@ -106,9 +106,10 @@ export const technicalSkills = {
     {
       title: "Backend & APIs",
       skills: [
-        { name: "FastAPI", level: 88 },
+        { name: "FastAPI", level: 90 },
         { name: "REST APIs", level: 90 },
-        { name: "JWT Authentication", level: 82 },
+        { name: "GitHub Webhooks", level: 82 },
+        { name: "Server-Sent Events", level: 78 },
       ],
     },
     {
@@ -117,15 +118,16 @@ export const technicalSkills = {
         { name: "MongoDB", level: 82 },
         { name: "Power BI", level: 80 },
         { name: "Microsoft Tools", level: 85 },
+        { name: "TF-IDF / PyPDF", level: 78 },
       ],
     },
     {
       title: "Tools & Infrastructure",
       skills: [
-        { name: "Docker", level: 78 },
+        { name: "Docker", level: 80 },
         { name: "VM VirtualBox", level: 75 },
-        { name: "Vercel / Render", level: 85 },
-        { name: "Git & GitHub", level: 88 },
+        { name: "Vercel / Render", level: 88 },
+        { name: "Git & GitHub", level: 90 },
       ],
     },
   ],
@@ -135,28 +137,28 @@ export const contentCreation = {
   badge: "AI Focus Areas",
   heading: "Where I Apply AI to the Real World",
   description:
-    "Beyond coursework, I build AI systems that solve real accessibility, lifestyle, and automation challenges.",
+    "Beyond coursework, I build production-ready AI systems that solve real automation, accessibility, and developer tooling challenges.",
   categories: [
     {
-      title: "Computer Vision",
+      title: "AI Agents with Memory",
       description:
-        "Building real-time object detection and scene understanding systems using YOLOv8, OpenCV, and FastAPI for assistive technology and beyond.",
-      stats: "YOLOv8 · OpenCV",
-      icon: "👁️",
-    },
-    {
-      title: "Voice & NLP",
-      description:
-        "Integrating Whisper ASR and edge-tts for multilingual voice interaction, enabling hands-free AI assistants and accessibility tools.",
-      stats: "Whisper · edge-tts",
-      icon: "🎙️",
-    },
-    {
-      title: "AI-Powered Web Apps",
-      description:
-        "Full-stack applications fusing React, Node.js, and AI backends — from skin-tone color advisors to intelligent travel planners.",
-      stats: "React · FastAPI · MongoDB",
+        "Building LangGraph ReAct agents with persistent long-term memory, voice input, and multi-user support — deployed on free cloud infrastructure.",
+      stats: "LangGraph · LangChain · Groq",
       icon: "🧠",
+    },
+    {
+      title: "Developer Tooling",
+      description:
+        "Automating GitHub PR code reviews with AI — detecting bugs, security issues, and best practice violations using webhooks and Groq's Llama model.",
+      stats: "GitHub API · FastAPI · Groq",
+      icon: "🔧",
+    },
+    {
+      title: "RAG & Document AI",
+      description:
+        "Full-stack RAG chatbots that let users chat with their PDFs using TF-IDF retrieval, streaming SSE responses, and source page attribution.",
+      stats: "TF-IDF · Next.js · Groq",
+      icon: "📄",
     },
     {
       title: "Responsible AI",
@@ -186,7 +188,7 @@ export const softSkillsList = [
   {
     name: "Adaptability",
     icon: "🌟",
-    desc: "Quick to learn new frameworks and tools — from YOLOv8 to FastAPI to cloud deployment.",
+    desc: "Quick to learn new frameworks and tools — from LangGraph to GitHub Webhooks to cloud deployment.",
   },
   {
     name: "Analytical Thinking",
@@ -206,7 +208,7 @@ export const softSkillsList = [
   {
     name: "Creativity",
     icon: "🎨",
-    desc: "Designing innovative AI solutions — from emotion-aware music players to real-time vision assistants.",
+    desc: "Designing innovative AI solutions — from memory agents to AI-powered code review automation.",
   },
   {
     name: "Attention to Detail",
@@ -217,64 +219,72 @@ export const softSkillsList = [
 
 export const projects = [
   {
-    id: "visionmate-ai",
+    id: "custom-ai-agent-memory",
     number: "01",
     badge: "🚀 Flagship Project",
-    title: "VisionMate AI",
+    title: "Custom AI Agent with Memory",
     description:
-      "An AI-powered assistive web application designed for visually impaired individuals, leveraging real-time computer vision and voice interaction to enhance environmental awareness and navigation. Built with FastAPI and Next.js integrated with YOLOv8, OpenCV, Whisper, and edge-tts for live object detection, scene understanding, OCR-based text reading, and intelligent voice feedback. Features distance estimation, proximity alerts, crowd detection, directional guidance, emergency SOS alerts, and multilingual voice assistance. Frontend deployed on Vercel, backend on Render.",
+      "Developed a full-stack AI agent with persistent long-term memory supporting both voice and text interactions, enabling personalized conversations by remembering user preferences, facts and goals across multiple sessions. Engineered a LangGraph ReAct agent integrated with LangChain and Groq's Llama 3.3 70B model, implementing intelligent memory retrieval, automated memory storage and contextual response generation using scoped user memories. Built a FastAPI backend exposing REST APIs for chat, memory management and Whisper-based speech transcription, while developing a Streamlit frontend featuring voice input, real-time chat and an interactive memory dashboard. Designed a scalable multi-user architecture with isolated memory stores, Dockerized deployment and cloud hosting on Render and Streamlit Community Cloud, delivering a production-ready AI assistant supporting persistent conversations and 1000+ daily requests on free infrastructure.",
     techTags: [
       "Python",
-      "TypeScript",
       "FastAPI",
-      "Next.js",
-      "YOLOv8",
-      "OpenCV",
+      "LangGraph",
+      "LangChain",
+      "Streamlit",
+      "Groq API",
       "Whisper",
-      "edge-tts",
-      "Vercel",
+      "Docker",
       "Render",
     ],
     links: {
-      github: "https://github.com/harshabasava970-bot/visionmate-ai",
-      demo: null,
+      github: "https://github.com/harshabasava970-bot/Custom-AI-agent-with-memory",
+      demo: "https://harshabasava970-bot-custom-ai-agent-with-mem-frontendapp-dscod3.streamlit.app",
     },
     isFlagship: true,
   },
   {
-    id: "travelwear-ai",
+    id: "ai-code-review-bot",
     number: "02",
     badge: null,
-    title: "TravelWear AI",
+    title: "AI Code Review Bot – GitHub PR Auto-Reviewer",
     description:
-      "A full-stack AI-powered travel fashion assistant that recommends clothing based on real-time weather conditions for any destination worldwide. Features a Smart Style Advisor using Canvas API color histogram analysis to detect skin tone from uploaded photos and generate personalized outfit color recommendations. Includes an AI chatbot for destination-specific advice, smart packing checklist generator with PDF export, 5-day weather forecast, and JWT-based authentication with saved outfits and travel history stored in MongoDB Atlas.",
+      "Developed an AI-powered GitHub Pull Request review automation system that performs intelligent code analysis and posts detailed review comments directly on GitHub using Groq's Llama 3.3 70B model. Engineered a FastAPI backend integrated with GitHub Webhooks and GitHub REST APIs to automatically retrieve pull request diffs, analyze code quality and generate actionable feedback for every submitted PR. Implemented automated detection of logic errors, security vulnerabilities, performance bottlenecks, coding standard violations and best practice recommendations while providing overall approval or rejection verdicts with file-level review comments. Deployed the backend on Render with zero-cost cloud infrastructure, enabling scalable, production-ready continuous AI-assisted code review without relying on paid AI services.",
     techTags: [
-      "React.js",
-      "Node.js",
-      "MongoDB",
-      "TailwindCSS",
-      "OpenWeatherMap API",
-      "JWT",
-      "Canvas API",
-      "Vercel",
+      "Python",
+      "FastAPI",
+      "GitHub Webhooks",
+      "GitHub REST API",
+      "Groq API",
       "Render",
     ],
     links: {
-      github: "https://github.com/harshabasava970-bot/travelwear-ai",
-      frontendDemo: "https://travelwear-ai.vercel.app",
+      github: "https://github.com/harshabasava970-bot/ai-code-review-bot",
+      demo: null,
     },
     isFlagship: false,
   },
   {
-    id: "emotion-music-player",
+    id: "rag-chatbot-pdf",
     number: "03",
     badge: null,
-    title: "Emotion Based Automatic Music Player",
+    title: "RAG Chatbot – Chat with your PDFs",
     description:
-      "An intelligent music recommendation and playback system that automatically changes songs based on user emotions and mood detection. Integrates sensor-based input processing and emotion analysis techniques to identify user emotional states and personalize music playback in real time. Engineered with Python and embedded components to support automated song selection, responsive playback control, and adaptive user interaction.",
-    techTags: ["Python", "Embedded Systems", "Sensors", "Emotion Detection", "IoT"],
+      "Developed a full-stack Retrieval-Augmented Generation (RAG) chatbot enabling users to upload PDF documents and interact with them through natural language conversations while generating responses strictly grounded in document content. Engineered a lightweight retrieval pipeline using TF-IDF indexing and PyPDF for document parsing, efficiently retrieving relevant text chunks which were processed by Groq's Llama 3.3 70B model to generate context-aware answers with exact source page references. Implemented real-time response streaming using Server-Sent Events (SSE), low-memory document indexing, document chunking and source attribution to improve transparency, accuracy and user trust. Built the frontend using Next.js and deployed the application on Vercel with a Dockerized FastAPI backend hosted on Render, delivering a scalable, production-ready AI document assistant without external vector databases or paid APIs.",
+    techTags: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "TF-IDF",
+      "PyPDF",
+      "Groq API",
+      "SSE",
+      "Docker",
+      "Vercel",
+      "Render",
+    ],
     links: {
-      github: null,
+      github: "https://github.com/harshabasava970-bot/rag-chatbot-pdf",
+      demo: null,
     },
     isFlagship: false,
   },
@@ -302,7 +312,7 @@ export const certificates = {
     },
     {
       name: "Machine Learning Fundamentals",
-      issuer: "AWS / Azure",
+      issuer: "AWS",
       icon: "📊",
       url: "https://drive.google.com/file/d/1M0YO3nFjocO_oYfZ9LVnUsaOPgjjW9qP/view",
     },
@@ -323,7 +333,7 @@ export const education = {
 export const footerContent = {
   taglines: [
     "Artificial Intelligence & Machine Learning",
-    "Python · FastAPI · Computer Vision",
+    "Python · FastAPI · LangGraph",
     "Full Stack AI Applications",
   ],
   credential: "B.Tech CSE (AI & ML) · CGPA 8.5",
