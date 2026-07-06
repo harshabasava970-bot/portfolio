@@ -284,7 +284,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/harshabasava970-bot/rag-chatbot-pdf",
-      demo: null,
+      demo: "https://rag-chatbot-nu-blue.vercel.app",
     },
     isFlagship: false,
   },
