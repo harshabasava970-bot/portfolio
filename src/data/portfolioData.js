@@ -30,7 +30,7 @@ export const heroContent = {
   greeting: "Hi, I'm Basava Harsha",
   titleHighlight: "AI & ML Engineer",
   subtitle:
-    "I build intelligent systems using Python, FastAPI, computer vision, and modern full-stack technologies.",
+    "I build AI agents, cybersecurity platforms, and full-stack applications using Python, FastAPI, LangChain, and modern ML technologies.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
@@ -41,7 +41,7 @@ export const heroContent = {
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Basava Harsha</span>, a CSE student specializing in Artificial Intelligence and Machine Learning, based in Vuyyur, India. I'm passionate about building intelligent, real-world applications that solve meaningful problems using Python, FastAPI, computer vision, and full-stack technologies.`,
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Basava Harsha</span>, a CSE student specializing in Artificial Intelligence and Machine Learning, based in Vuyyur, India. I'm passionate about building intelligent, real-world applications — from explainable AI cybersecurity platforms to LLM-powered agents — using Python, FastAPI, LangChain, and full-stack technologies.`,
   techStack: ["Python", "FastAPI", "React"],
 };
 
@@ -89,9 +89,20 @@ export const technicalSkills = {
       skills: [
         { name: "Prompt Engineering", level: 88 },
         { name: "Responsible AI", level: 82 },
-        { name: "Vibe Coding", level: 78 },
         { name: "YOLOv8 / OpenCV", level: 85 },
-        { name: "Whisper / edge-tts", level: 80 },
+        { name: "HuggingFace Transformers", level: 82 },
+        { name: "SHAP / LIME (XAI)", level: 80 },
+        { name: "XGBoost / Scikit-learn", level: 84 },
+      ],
+    },
+    {
+      title: "AI Agents & LLMs",
+      skills: [
+        { name: "LangChain", level: 83 },
+        { name: "LangGraph", level: 80 },
+        { name: "Groq API (Llama 3.3)", level: 85 },
+        { name: "Whisper (Speech-to-Text)", level: 82 },
+        { name: "Vibe Coding", level: 78 },
       ],
     },
     {
@@ -101,31 +112,27 @@ export const technicalSkills = {
         { name: "Next.js", level: 80 },
         { name: "Node.js", level: 82 },
         { name: "TypeScript", level: 78 },
+        { name: "Streamlit", level: 88 },
       ],
     },
     {
       title: "Backend & APIs",
       skills: [
-        { name: "FastAPI", level: 88 },
+        { name: "FastAPI", level: 90 },
         { name: "REST APIs", level: 90 },
-        { name: "JWT Authentication", level: 82 },
+        { name: "GitHub Webhooks", level: 82 },
+        { name: "JWT Authentication", level: 84 },
       ],
     },
     {
-      title: "Data & Databases",
+      title: "Data, Tools & Infrastructure",
       skills: [
         { name: "MongoDB", level: 82 },
         { name: "Power BI", level: 80 },
-        { name: "Microsoft Tools", level: 85 },
-      ],
-    },
-    {
-      title: "Tools & Infrastructure",
-      skills: [
-        { name: "Docker", level: 78 },
+        { name: "Docker", level: 80 },
+        { name: "GitHub Actions (CI/CD)", level: 82 },
+        { name: "Vercel / Render", level: 88 },
         { name: "VM VirtualBox", level: 75 },
-        { name: "Vercel / Render", level: 85 },
-        { name: "Git & GitHub", level: 88 },
       ],
     },
   ],
@@ -135,34 +142,34 @@ export const contentCreation = {
   badge: "AI Focus Areas",
   heading: "Where I Apply AI to the Real World",
   description:
-    "Beyond coursework, I build AI systems that solve real accessibility, lifestyle, and automation challenges.",
+    "Beyond coursework, I build AI systems that solve real cybersecurity, accessibility, and automation challenges.",
   categories: [
     {
-      title: "Computer Vision",
+      title: "Explainable AI & Cybersecurity",
       description:
-        "Building real-time object detection and scene understanding systems using YOLOv8, OpenCV, and FastAPI for assistive technology and beyond.",
-      stats: "YOLOv8 · OpenCV",
-      icon: "👁️",
+        "Building production-grade threat detection platforms using DistilBERT, XGBoost, Isolation Forest, SHAP, and LIME — with full explainability for every prediction.",
+      stats: "SHAP · LIME · XGBoost",
+      icon: "🛡️",
     },
     {
-      title: "Voice & NLP",
+      title: "AI Agents & LLMs",
       description:
-        "Integrating Whisper ASR and edge-tts for multilingual voice interaction, enabling hands-free AI assistants and accessibility tools.",
-      stats: "Whisper · edge-tts",
-      icon: "🎙️",
+        "Engineering LangGraph ReAct agents with persistent memory, voice interaction, and Groq's Llama 3.3 70B — enabling personalized multi-session AI assistants.",
+      stats: "LangChain · LangGraph · Groq",
+      icon: "🤖",
     },
     {
       title: "AI-Powered Web Apps",
       description:
-        "Full-stack applications fusing React, Node.js, and AI backends — from skin-tone color advisors to intelligent travel planners.",
+        "Full-stack applications fusing React, Node.js, FastAPI, and AI backends — from smart outfit planners to automated GitHub PR code reviewers.",
       stats: "React · FastAPI · MongoDB",
       icon: "🧠",
     },
     {
       title: "Responsible AI",
       description:
-        "Studying and applying ethical AI principles, bias mitigation, and responsible deployment practices in every project I build.",
-      stats: "IBM · Google · Microsoft",
+        "Studying and applying ethical AI principles, bias mitigation, transparent predictions, and responsible deployment practices across every project I build.",
+      stats: "IBM · Google · Microsoft · AWS",
       icon: "⚖️",
     },
   ],
@@ -217,64 +224,98 @@ export const softSkillsList = [
 
 export const projects = [
   {
-    id: "visionmate-ai",
+    id: "adaptive-ai-cyber-threat",
     number: "01",
     badge: "🚀 Flagship Project",
-    title: "VisionMate AI",
+    title: "Adaptive Explainable AI for Cyber Threat Detection",
     description:
-      "An AI-powered assistive web application designed for visually impaired individuals, leveraging real-time computer vision and voice interaction to enhance environmental awareness and navigation. Built with FastAPI and Next.js integrated with YOLOv8, OpenCV, Whisper, and edge-tts for live object detection, scene understanding, OCR-based text reading, and intelligent voice feedback. Features distance estimation, proximity alerts, crowd detection, directional guidance, emergency SOS alerts, and multilingual voice assistance. Frontend deployed on Vercel, backend on Render.",
+      "A production-grade AI-powered cybersecurity platform that detects phishing emails, malicious URLs, suspicious login behavior, and network anomalies using Machine Learning, Deep Learning, and Explainable AI. Features a modular multi-model pipeline with DistilBERT/BERT for phishing detection, XGBoost for malicious URL and network intrusion detection, and Isolation Forest for behavioral anomaly detection. An Adaptive Threat Fusion Engine generates unified risk scores and actionable security insights. SHAP and LIME provide transparent model explanations and remediation recommendations. Includes a Streamlit SOC dashboard with real-time analytics, threat timelines, PDF/CSV reporting, Docker support, CI/CD via GitHub Actions, and cloud deployment on Render and Streamlit Community Cloud.",
     techTags: [
       "Python",
-      "TypeScript",
       "FastAPI",
-      "Next.js",
-      "YOLOv8",
-      "OpenCV",
-      "Whisper",
-      "edge-tts",
-      "Vercel",
-      "Render",
+      "Streamlit",
+      "PyTorch",
+      "HuggingFace Transformers",
+      "XGBoost",
+      "SHAP",
+      "LIME",
+      "SQLAlchemy",
+      "Docker",
+      "GitHub Actions",
     ],
     links: {
-      github: "https://github.com/harshabasava970-bot/visionmate-ai",
-      demo: null,
+      github: "https://github.com/harshabasava970-bot/adaptive-ai-cyber-threat",
+      frontendDemo: "https://cyber-threat-ai.streamlit.app",
     },
     isFlagship: true,
   },
   {
-    id: "travelwear-ai",
+    id: "custom-ai-agent-memory",
     number: "02",
     badge: null,
-    title: "TravelWear AI",
+    title: "Custom AI Agent with Memory",
     description:
-      "A full-stack AI-powered travel fashion assistant that recommends clothing based on real-time weather conditions for any destination worldwide. Features a Smart Style Advisor using Canvas API color histogram analysis to detect skin tone from uploaded photos and generate personalized outfit color recommendations. Includes an AI chatbot for destination-specific advice, smart packing checklist generator with PDF export, 5-day weather forecast, and JWT-based authentication with saved outfits and travel history stored in MongoDB Atlas.",
+      "A production-ready AI assistant with persistent long-term memory supporting both voice and text interactions. Remembers user preferences, facts, and goals across multiple sessions using a LangGraph ReAct agent integrated with LangChain and Groq's Llama 3.3 70B model. Features intelligent memory retrieval, automated memory storage, and contextual response generation. FastAPI backend exposes REST APIs for chat, memory management, and Whisper-based speech transcription. Streamlit frontend provides voice input, real-time conversations, and an interactive memory dashboard. Designed with isolated multi-user memory stores, Dockerized deployment, and cloud hosting on Render and Streamlit Community Cloud.",
+    techTags: [
+      "Python",
+      "FastAPI",
+      "LangGraph",
+      "LangChain",
+      "Streamlit",
+      "Groq API",
+      "Whisper",
+      "Docker",
+      "Render",
+    ],
+    links: {
+      github: "https://github.com/harshabasava970-bot/Custom-AI-agent-with-memory",
+      frontendDemo: "https://harshabasava970-bot-custom-ai-agent-with-mem-frontendapp-dscod3.streamlit.app",
+    },
+    isFlagship: false,
+  },
+  {
+    id: "ai-code-review-bot",
+    number: "03",
+    badge: null,
+    title: "AI Code Review Bot – GitHub PR Auto-Reviewer",
+    description:
+      "An AI-powered GitHub Pull Request review automation system that performs intelligent code analysis and posts detailed review comments directly on GitHub using Groq's Llama 3.3 70B model. A FastAPI backend integrates with GitHub Webhooks and GitHub REST APIs to automatically retrieve PR diffs, analyze code quality, and generate actionable feedback for every submitted pull request. Automatically detects logic errors, security vulnerabilities, performance bottlenecks, coding standard violations, and best practice issues. Provides file-level review comments and overall approval or rejection verdicts. Deployed on Render using zero-cost cloud infrastructure.",
+    techTags: [
+      "Python",
+      "FastAPI",
+      "GitHub Webhooks",
+      "GitHub REST API",
+      "Groq API",
+      "Llama 3.3 70B",
+      "Render",
+    ],
+    links: {
+      github: "https://github.com/harshabasava970-bot/AI-code-review-bot",
+      demo: null,
+    },
+    isFlagship: false,
+  },
+  {
+    id: "travelwear-ai",
+    number: "04",
+    badge: null,
+    title: "TravelWear AI – Smart Weather Based Outfit Planner",
+    description:
+      "A full-stack AI-powered travel fashion assistant that recommends clothing based on real-time weather conditions from OpenWeatherMap for any destination worldwide. Features a Smart Style Advisor using Canvas API color histogram analysis to detect skin tone from uploaded photos and generate personalized outfit color recommendations. Includes an AI chatbot for destination-specific clothing, food, and places-to-visit guidance, smart packing checklist with PDF export, 5-day weather forecast with travel date selection, and JWT-based authentication with saved outfits and travel history stored in MongoDB Atlas.",
     techTags: [
       "React.js",
       "Node.js",
       "MongoDB",
-      "TailwindCSS",
       "OpenWeatherMap API",
-      "JWT",
       "Canvas API",
+      "JWT",
+      "TailwindCSS",
       "Vercel",
       "Render",
     ],
     links: {
       github: "https://github.com/harshabasava970-bot/travelwear-ai",
-      frontendDemo: "https://travelwear-ai.vercel.app",
-    },
-    isFlagship: false,
-  },
-  {
-    id: "emotion-music-player",
-    number: "03",
-    badge: null,
-    title: "Emotion Based Automatic Music Player",
-    description:
-      "An intelligent music recommendation and playback system that automatically changes songs based on user emotions and mood detection. Integrates sensor-based input processing and emotion analysis techniques to identify user emotional states and personalize music playback in real time. Engineered with Python and embedded components to support automated song selection, responsive playback control, and adaptive user interaction.",
-    techTags: ["Python", "Embedded Systems", "Sensors", "Emotion Detection", "IoT"],
-    links: {
-      github: null,
+      frontendDemo: "https://travelwear-ai.vercel.app/try-on",
     },
     isFlagship: false,
   },
@@ -314,7 +355,7 @@ export const certificates = {
 export const education = {
   degree: "B.Tech – Computer Science & Engineering (AI & ML)",
   institution: "Kalasalingam Academy of Research & Education, Tamil Nadu",
-  cgpa: "8.5",
+  cgpa: "8.71",
   graduation: "2027",
   twelfth: "Intermediate – 10/10 (Sri Chaitanya Mahila Jr Kalasala)",
   tenth: "10th CBSE – 10/10 (Sri Chaithanya High School)",
@@ -323,10 +364,10 @@ export const education = {
 export const footerContent = {
   taglines: [
     "Artificial Intelligence & Machine Learning",
-    "Python · FastAPI · Computer Vision",
-    "Full Stack AI Applications",
+    "Python · FastAPI · LangChain · LangGraph",
+    "AI Agents · Cybersecurity · Full Stack Apps",
   ],
-  credential: "B.Tech CSE (AI & ML) · CGPA 8.5",
+  credential: "B.Tech CSE (AI & ML) · CGPA 8.71",
   copyright: `© ${new Date().getFullYear()} Basava Harsha | Built with React`,
 };
 
